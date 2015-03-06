@@ -16,7 +16,7 @@ Anook is a gamers social platform: http://anook.com
 I would just like to note that all images used in this plugin are rightfully directly from anook.com for continuity in the house style. I have no made any of them, just used them.
 
 == Installation ==
-1. Upload the plugin into the 'w/p-content/plugins/' directory
+1. Upload the plugin into the 'wp-content/plugins/' directory
 1. Activate the plugin in the plugins menu
 1. Add the shortcode (Eg. [anook user="surdaft"]) or widget to your blog
 
@@ -30,14 +30,14 @@ I would just like to note that all images used in this plugin are rightfully dir
 == 1.0.0 ==
 * Initial version
 
-== 1.0.1 ==
+= 1.0.1 =
 * Fixed PHP version 4.4 or lower incompatibility
 
-== 1.0.2 ==
+= 1.0.2 =
 * Responsive badge
 * Options page for further options
 
-== 1.0.3 ==
+= 1.0.3 =
 * Small bug fixes
 * Put onto wordpress directory
 * Screenshots + other assets
