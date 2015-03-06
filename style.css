@@ -1,0 +1,124 @@
+.anook-badge, .anook-badge *{
+	box-sizing:border-box;
+}
+.anook-badge{
+	padding:20px;
+	color:white;
+	background:rgb(60,60,60);
+	overflow:hidden;
+	background: center url("assets/background.png");
+	background-size:150%;
+	border-radius:3px;
+	margin:20px auto;
+	width:320px;
+	max-width:100%;
+}
+.anook-badge.thin{
+	text-align:center;
+}
+.anook-badge:last-child{
+	margin-bottom:0;
+}
+.anook-badge #img-container{
+	width:128px;
+	height:94px;
+	overflow:hidden;
+	float:left;
+}
+.anook-badge.thin #img-container{
+	width:auto;
+	height:auto;
+	overflow:hidden;
+	float:none;
+}
+.anook-badge.thin.anook-user, .anook-badge.nook-ultra-thin{
+	background-size:auto 150%;
+}
+.anook-badge #img-container-nook{
+	width:64px;
+	height:64px;
+	overflow:hidden;
+	float:left;
+}
+.anook-badge #img-container img{
+	width:128px !important;
+}
+.anook-badge #img-container-nook img{
+	width:64px !important;
+}
+.anook-badge.thin #image-container-nook{
+	overflow:hidden;
+	height:auto;
+	width:auto;
+	float:none;
+}
+.anook-user .logo{
+	height:15px;
+	float:right;
+	clear:right;
+}
+.anook-badge .logo{
+	opacity:0.2;
+}
+.anook-user .logo-container{
+	margin-bottom:15px;
+}
+.anook-badge:not(.anook-user) .logo{
+	float:right;
+	height:60px;
+}
+.anook-badge.thin:not(.anook-user) .logo{
+	display:none;
+}
+.anook-badge .right{
+	margin-left:20px;
+	display:inline-block;
+}
+.anook-badge:not(.anook-user) .right{
+	width:135px;
+}
+.anook-badge.thin .right{
+	margin-left:0;
+	display:block;
+	width:100%;
+}
+.anook-badge span{
+	display:block;
+	overflow:hidden;
+}
+.anook-badge #followers, .anook-badge #country{
+	font-size: 12px;
+	line-height: 12px;
+}
+.anook-badge.thin #followers{
+	margin-bottom:10px;
+}
+.anook-badge #country{
+	margin-bottom:24px;
+}
+.anook-badge #follow-button{
+	color:#8C8C8C;
+	background: #464343 url('assets/listItemAction.png') no-repeat 0px -40px;
+	transition:text .2s linear;
+	padding:2px 8px 2px 20px;
+	border-radius:2px;
+	font-size:12px;
+	overflow:hidden;
+}
+.anook-badge #follow-button:hover{
+	color:white;
+	background-position:0px -80px;
+}
+.anook-badge #username{
+	line-height: 16px;
+	margin-bottom: 4px;
+}
+.anook-badge a{
+	color:white;
+	text-decoration: none !important;
+}
+.anook-badge.nook-ultra-thin #img-container-nook{
+	display:block;
+	float:none;
+	width:auto;
+}
