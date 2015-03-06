@@ -27,7 +27,7 @@ I would just like to note that all images used in this plugin are rightfully dir
 4. Game badge
 
 == Changelog ==
-== 1.0.0 ==
+= 1.0.0 =
 * Initial version
 
 = 1.0.1 =
