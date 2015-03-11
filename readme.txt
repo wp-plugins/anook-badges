@@ -27,20 +27,23 @@ I would just like to note that all images used in this plugin are rightfully dir
 4. Game badge
 
 == Changelog ==
-= 1.0.0 =
-* Initial version
-
-= 1.0.1 =
-* Fixed PHP version 4.4 or lower incompatibility
-
-= 1.0.2 =
-* Responsive badge
-* Options page for further options
+= 1.0.4 =
+* Added games beneath the widget, showing a badge and your fame
+* Caching! It now stores all the data in a .json file with the plugin and so load times are improved as well as Chocy is happy. :P
 
 = 1.0.3 =
 * Small bug fixes
 * Put onto wordpress directory
 * Screenshots + other assets
 
-= 1.0.4 =
-*Added games beneath the widget, showing a badge and your fame
+= 1.0.2 =
+* Responsive badge
+* Options page for further options
+
+= 1.0.1 =
+* Fixed PHP version 4.4 or lower incompatibility
+
+= 1.0.0 =
+* Initial version
+
+
