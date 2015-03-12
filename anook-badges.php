@@ -34,8 +34,8 @@ function anook_fetch($part, $search, $params, $json_encode=false){
 	// if to use the cache
 	if($cache){
 		// obtain the cache file and decode the contents of the file into a json array
-		if(file_exists(plugins_url('cache.json',__FILE__))) $temp = json_decode(file_get_contents(plugins_url('cache.json',__FILE__)), true);
-		if(isset($temp[$search_name])&&(strtotime(date('YmdHi'))-(strtotime($temp[$search_name]['timestamp']))<((60*60)*$hours)) && file_exists(plugins_url('cache.json',__FILE__))){
+		if(file_exists(plugin_dir_path(__FILE__).'/cache.json')) $temp = json_decode(file_get_contents(plugin_dir_path(__FILE__).'/cache.json'), true);
+		if(isset($temp[$search_name])&&(strtotime(date('YmdHi'))-(strtotime($temp[$search_name]['timestamp']))<((60*60)*$hours)) && file_exists(plugin_dir_path(__FILE__).'/cache.json')){
 			// the row exists for this search and is less than 10 hours old use it
 			$output = $temp[$search_name];
 			$output['source'] = 'cache';
@@ -154,7 +154,7 @@ function anook_show($atts){
 	if($atts['part'] == 'user')
 		$html .= '<div class="anook-badge anook-user" id="anook-user-badge">
 					<span class="logo-container"><a href="http://anook.com/" title="Anook" target="_blank"><img class="logo" src="'.plugin_dir_url(__FILE__).'images/anook_logo_dark.png" alt="Anook Logo"></a></span>
-					<div id="img-container"><a href="'.$return['url'].'" target="_blank"><img src="http://anook.com/'.$return['picture'].'" alt="'.$return['username'].'\'s profile picture" /></a></div>
+					<div class="img-container"><a href="'.$return['url'].'" target="_blank"><img src="http://anook.com/'.$return['picture'].'" alt="'.$return['username'].'\'s profile picture" /></a></div>
 					<div class="right">
 						<span id="username"><a href="'.$return['url'].'" target="_blank">'.$return['username'].'</a></span>
 						<span id="country">'.$return['country'].'</span>
@@ -165,7 +165,7 @@ function anook_show($atts){
 	elseif($atts['part'] == 'nook' || $atts['part'] == 'game')
 		$html .= '<div class="anook-badge anook-'.$atts['part'].'" id="anook-'.$atts['part'].'-badge">
 					<a href="http://anook.com" title="Anook" target="_blank"><img class="logo" src="'.plugin_dir_url(__FILE__).'images/anook_icon_dark.png"></a>
-					<div id="img-container-nook"><a href="'.$return['url'].'" target="_blank"><img src="http://anook.com/'.$return['thumbnail'].'" /></a></div>
+					<div class="img-container-nook"><a href="'.$return['url'].'" target="_blank"><img src="http://anook.com/'.$return['thumbnail'].'" /></a></div>
 					<div class="right">
 						<span id="username"><a href="'.$return['url'].'" target="_blank">'.$return['name'].'</a></span>
 						<span id="country-empty"> </span>
@@ -180,7 +180,7 @@ function anook_show($atts){
 			foreach($games as $game){
 				if(in_array($show_game,$game)){
 					$game['fame'] = $game['user']['fame'];
-					$html .= '<li><div id="img-container"><img src="http://anook.com/'.$game['thumbnail'].'"></div><div class="right">'.$game['name'].'<small>Fame: '.$game['fame'].'</small></div></li>';
+					$html .= '<li><div class="img-container"><img src="http://anook.com/'.$game['thumbnail'].'"></div><div class="right">'.$game['name'].'<small>Fame: '.$game['fame'].'</small></div></li>';
 				}
 			}
 		}
@@ -207,7 +207,7 @@ function anook_show_shortcode($atts){
 		if($key == 'user')
 			$html .= '<div class="anook-badge anook-user" id="anook-user-badge">
 						<span class="logo-container"><a href="http://anook.com" title="Anook" target="_blank"><img class="logo" src="'.plugin_dir_url(__FILE__).'images/anook_logo_dark.png"></a></span>
-						<div id="img-container"><a href="'.$return['url'].'" target="_blank"><img src="http://anook.com/'.$return['picture'].'" /></a></div>
+						<div class="img-container"><a href="'.$return['url'].'" target="_blank"><img src="http://anook.com/'.$return['picture'].'" /></a></div>
 						<div class="right">
 							<span id="username"><a href="'.$return['url'].'" target="_blank">'.$return['username'].'</a></span>
 							<span id="country">'.$return['country'].'</span>
@@ -218,7 +218,7 @@ function anook_show_shortcode($atts){
 		elseif($key == 'nook' || $key == 'game')
 			$html .= '<div class="anook-badge anook-'.$key.'" id="anook-'.$key.'-badge">
 						<a href="http://anook.com" title="Anook" target="_blank"><img class="logo" src="'.plugin_dir_url(__FILE__).'images/anook_icon_dark.png"></a>
-						<div id="img-container-nook"><a href="'.$return['url'].'" target="_blank"><img src="http://anook.com/'.$return['thumbnail'].'" /></a></div>
+						<div class="img-container-nook"><a href="'.$return['url'].'" target="_blank"><img src="http://anook.com/'.$return['thumbnail'].'" /></a></div>
 						<div class="right">
 							<span id="username"><a href="'.$return['url'].'" target="_blank">'.$return['name'].'</a></span>
 							<span id="country-empty"> </span>

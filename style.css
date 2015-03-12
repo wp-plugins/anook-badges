@@ -19,13 +19,13 @@
 .anook-badge:last-child{
 	margin-bottom:0;
 }
-.anook-badge #img-container{
+.anook-badge .img-container{
 	width:128px;
 	height:94px;
 	overflow:hidden;
 	float:left;
 }
-.anook-badge.thin #img-container{
+.anook-badge.thin .img-container{
 	width:auto;
 	height:auto;
 	overflow:hidden;
@@ -34,19 +34,19 @@
 .anook-badge.thin.anook-user, .anook-badge.nook-ultra-thin{
 	background-size:auto 150%;
 }
-.anook-badge #img-container-nook{
+.anook-badge .img-container-nook{
 	width:64px;
 	height:64px;
 	overflow:hidden;
 	float:left;
 }
-.anook-badge #img-container img{
-	width:128px !important;
+.anook-badge .img-container img{
+	width:128px;
 }
-.anook-badge #img-container-nook img{
-	width:64px !important;
+.anook-badge .img-container-nook img{
+	width:64px;
 }
-.anook-badge.thin #image-container-nook{
+.anook-badge.thin > #image-container-nook{
 	overflow:hidden;
 	height:auto;
 	width:auto;
@@ -98,6 +98,8 @@
 }
 .anook-badge #country{
 	margin-bottom:24px;
+	color:#8C8C8C;
+	overflow:visible;
 }
 .anook-badge #follow-button{
 	color:#8C8C8C;
@@ -116,11 +118,17 @@
 	line-height: 16px;
 	margin-bottom: 4px;
 }
+.anook-badge #username a{
+	font-size:16px;
+}
+.anook-badge.thin #username{
+	margin-top: 10px;
+}
 .anook-badge a{
 	color:white;
 	text-decoration: none !important;
 }
-.anook-badge.nook-ultra-thin #img-container-nook{
+.anook-badge.nook-ultra-thin .img-container-nook{
 	display:block;
 	float:none;
 	width:auto;
@@ -132,6 +140,9 @@
 	border:0;
 	border-top:1px solid rgba(255,255,255,0.2);
 	background:none;
+}
+.anook-badge.thin ul{
+	margin-top:15px;
 }
 .anook-badge li{
 	list-style:none;
@@ -152,21 +163,28 @@
 	padding:0;
 	margin:0;
 }
-.anook-badge li img{
+.anook-badge li .img-container img{
 	height:40px;
+	width:40px;
 }
 .anook-badge li small{
 	color:#8C8C8C;
 }
-.anook-badge li #img-container{
+.anook-badge li .img-container, .anook-badge.thin li .img-container{
 	width:40px;
 	height:40px;
 	overflow:hidden;
 	border-radius:3px;
 }
-.anook-badge > .right{
+.anook-badge.thin li .img-container{
+	margin:0 auto;
+}
+.anook-badge:not(.thin) > .right{
 	max-width:130px;
 }
 .anook-badge li .right{
 	max-width:220px;
+}
+.anook-badge.thin .right > small{
+	margin:4px 0;
 }
