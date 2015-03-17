@@ -27,6 +27,9 @@ I would just like to note that all images used in this plugin are rightfully dir
 4. Game badge
 
 == Changelog ==
+= 1.0.5 =
+* Updated the stylesheet, hopefully this one is a little more dominant.. ;)
+
 = 1.0.4 =
 * Added games beneath the widget, showing a badge and your fame
 * Caching! It now stores all the data in a .json file with the plugin and so load times are improved as well as Chocy is happy. :P
