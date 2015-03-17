@@ -1,6 +1,19 @@
 .anook-badge, .anook-badge *{
 	box-sizing:border-box;
 }
+.anook-badge a{
+	color:white;
+	text-decoration: none !important;
+}
+.anook-badge span{
+	display:block;
+	overflow:hidden;
+}
+.anook-badge small{
+	color:#8C8C8C;
+}
+
+/* Container is .anook-badge */
 .anook-badge{
 	padding:20px;
 	color:white;
@@ -17,46 +30,18 @@
 	text-align:center;
 }
 .anook-badge:last-child{
-	margin-bottom:0;
+	margin-bottom:0; /* If you have one above the other - relates to the shortcode [anook user="surdaft" nook="3855"]  */
 }
-.anook-badge .img-container{
-	width:128px;
-	height:94px;
-	overflow:hidden;
-	float:left;
-}
-.anook-badge.thin .img-container{
-	width:auto;
-	height:auto;
-	overflow:hidden;
-	float:none;
-}
-.anook-badge.thin.anook-user, .anook-badge.nook-ultra-thin{
-	background-size:auto 150%;
-}
-.anook-badge .img-container-nook{
-	width:64px;
-	height:64px;
-	overflow:hidden;
-	float:left;
-}
-.anook-badge .img-container img{
-	width:128px;
-}
-.anook-badge .img-container-nook img{
-	width:64px;
-}
-.anook-badge.thin > #image-container-nook{
-	overflow:hidden;
-	height:auto;
-	width:auto;
-	float:none;
-}
+
+/*
+	Top right logo, or nook icon
+*/
 .anook-user .logo{
 	height:15px;
 	float:right;
 	clear:right;
 	transition:opacity .2s ease-in;
+	margin-bottom:15px;
 }
 .anook-badge .logo{
 	opacity:0.2;
@@ -64,16 +49,58 @@
 .anook-badge .logo:hover{
 	opacity:0.5;
 }
-.anook-user .logo-container{
-	margin-bottom:15px;
-}
 .anook-badge:not(.anook-user) .logo{
 	float:right;
 	height:60px;
+	margin-bottom:0;
 }
 .anook-badge.thin:not(.anook-user) .logo{
 	display:none;
 }
+
+/*
+	Img container (propicceh)
+*/
+
+.anook-badge .img-container{
+	max-width:45%; /* max-width 45% is = to 128px / 320px */
+	max-height:94px;
+	overflow:hidden;
+	float:left;
+	margin:0 auto;
+}
+.anook-badge.thin .img-container{
+	width:auto;
+	height:auto;
+	float:none;
+}
+.anook-badge .img-container-nook{
+	width:64px;
+	height:64px;
+	overflow:hidden;
+	float:left;
+}
+.anook-badge.thin > #image-container-nook{
+	overflow:hidden;
+	height:auto;
+	width:auto;
+	float:none;
+}
+.anook-badge .img-container img{
+	width:100%;
+}
+.anook-badge .img-container-nook img{
+	width:64px;
+}
+.anook-badge.nook-ultra-thin .img-container-nook{
+	display:block;
+	float:none;
+	width:auto;
+}
+
+/*
+	Profile info container
+*/
 .anook-badge .right{
 	margin-left:20px;
 	display:inline-block;
@@ -86,9 +113,12 @@
 	display:block;
 	width:100%;
 }
-.anook-badge span{
-	display:block;
-	overflow:hidden;
+
+/*
+	Profile information
+*/
+.anook-badge.thin .right > small{
+	margin:4px 0;
 }
 .anook-badge small, .anook-badge #country{
 	font-size: 12px;
@@ -100,6 +130,9 @@
 	margin-bottom:24px;
 	color:#8C8C8C;
 	overflow:visible;
+}
+.anook-badge.thin #country{
+	margin-top:5%;
 }
 .anook-badge #follow-button{
 	color:#8C8C8C;
@@ -124,16 +157,11 @@
 .anook-badge.thin #username{
 	margin-top: 10px;
 }
-.anook-badge a{
-	color:white;
-	text-decoration: none !important;
-}
-.anook-badge.nook-ultra-thin .img-container-nook{
-	display:block;
-	float:none;
-	width:auto;
-}
-.anook-badge ul{
+
+/*
+	Games list
+*/
+.anook-badge > ul{
 	list-style:none;
 	margin:15px 0 0;
 	padding:15px 0 0;
@@ -141,10 +169,10 @@
 	border-top:1px solid rgba(255,255,255,0.2);
 	background:none;
 }
-.anook-badge.thin ul{
+.anook-badge.thin > ul{
 	margin-top:15px;
 }
-.anook-badge li{
+.anook-badge > ul > li{
 	list-style:none;
 	margin:0;
 	padding:0;
@@ -154,37 +182,35 @@
 	overflow:hidden;
 	margin-bottom:10px;
 }
-.anook-badge li:last-child{
+.anook-badge > ul > li:last-child{
 	margin-bottom:0;
 }
-.anook-badge li:before, .anook-badge li:after{
+.anook-badge > ul > li:before, .anook-badge > ul > li:after{
 	content:none;
 	background:none;
 	padding:0;
 	margin:0;
 }
-.anook-badge li .img-container img{
+.anook-badge > ul > li .img-container img{
 	height:40px;
 	width:40px;
 }
-.anook-badge li small{
-	color:#8C8C8C;
-}
-.anook-badge li .img-container, .anook-badge.thin li .img-container{
+.anook-badge > ul > li .img-container, .anook-badge.thin > ul > li .img-container{
 	width:40px;
 	height:40px;
 	overflow:hidden;
 	border-radius:3px;
 }
-.anook-badge.thin li .img-container{
-	margin:0 auto;
+.anook-badge.thin > ul > li .img-container{
+	margin:0 auto 5%;
+}
+.anook-badge > ul > li .right{
+	max-width:220px;
 }
 .anook-badge:not(.thin) > .right{
 	max-width:130px;
 }
-.anook-badge li .right{
-	max-width:220px;
-}
-.anook-badge.thin .right > small{
-	margin:4px 0;
+.anook-badge.thin > ul > li:not(:first-child){
+	padding-top:10%;
+	border-top:1px solid rgba(200,200,200,0.1);
 }

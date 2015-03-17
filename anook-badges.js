@@ -1,7 +1,7 @@
 var $ = jQuery;
 $(function(){
 	badge_width();
-	jQuery(window).resize(function(){
+	$('.anook-badge').resize(function(){
 		badge_width();
 	})
 	$('#widgets-right .anook_admin_show_games input[type=radio]').click(function(){
@@ -27,13 +27,20 @@ function reload_games_list(){
 }
 function badge_width(){
 	$.each($('.anook-badge'), function(){
-		if($(this).width() < 280){
-			if($(this).attr('id')!='anook-user-badge' && $(this).width() < 180){
-				$(this).addClass('nook-ultra-thin');
+		if($(this).width() < 260){
+			$('.anook-badge #country').css({'margin-bottom':'5%'})
+			if($(this).width() < 225){
+				if($(this).attr('id')!='anook-user-badge' && $(this).width() < 180){
+					$(this).addClass('nook-ultra-thin');
+				} else {
+					$(this).removeClass('nook-ultra-thin');
+				}
+				$(this).addClass('thin');
+			} else {
+				$(this).removeClass('thin');
 			}
-			$(this).addClass('thin');
 		} else {
-			$(this).removeClass('thin');
+			$('.anook-badge #country').css({'margin-bottom':'24px'})
 		}
 	})
 }

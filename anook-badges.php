@@ -3,7 +3,7 @@
  * Plugin Name: Anook Badges
  * Plugin URI: https://wordpress.org/plugins/anook-badges/
  * Description: Insert a badge of a user / nook into your post
- * Version: 1.0.4
+ * Version: 1.0.5
  * Author: SurDaft Jack
  * Author URI: http://surdaft.me
  * License: GPL3
